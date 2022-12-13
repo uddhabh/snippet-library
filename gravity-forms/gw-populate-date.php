@@ -301,7 +301,7 @@ class GW_Populate_Date {
 						} );
 
 						// Listen for any dynamic content loaded on modifier field (if existing) to refresh values on Target.
-						if ( self.modifier ) {
+						if ( self.modifier && self instanceof GWPopulateDate ) {
 							var modifier = self.modifier.inputId;
 
 							if ( modifier ) {
