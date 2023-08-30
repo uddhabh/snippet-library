@@ -319,7 +319,7 @@ class GW_Zip_Files {
 		$form_id  = $entry['form_id'];
 		$form     = GFAPI::get_form( $form_id );
 		// replace merge tags in the zip file name
-		$zip_name = GFCommon::replace_variables( $this->_args['zip_name'], $form, $entry, false, false, false );
+		$zip_name = GFCommon::replace_variables( $this->_args['zip_name'], $form, $entry, false, false, false, 'text' );
 		return $this->get_slug( $zip_name, $entry['id'], $this->_args['field_ids'] ) . '.zip';
 	}
 
