@@ -5,10 +5,10 @@
  */
 
 class GPNF_Map_Child_Entries_To_ACF_Repeater {
-	function __construct() {
+	function __construct( $args ) {
 		$this->_args = wp_parse_args( $args, array(
 			'form_id'                 => false,
-			'$nested_form_field_id'   => false,
+			'nested_form_field_id'   => false,
 			'field_map'               => array(),
 			'acf_repeater_field_name' => false,
 		) );
