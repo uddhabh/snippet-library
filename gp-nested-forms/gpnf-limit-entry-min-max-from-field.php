@@ -4,6 +4,7 @@
  * http://gravitywiz.com/documentation/gravity-forms-nested-forms/
  */
 class GP_Nested_Forms_Dynamic_Entry_Min_Max {
+    private $_args;
 
 	public function __construct( $args = array() ) {
 
@@ -131,7 +132,8 @@ class GP_Nested_Forms_Dynamic_Entry_Min_Max {
 
 					self.init = function () {
 
-						var attrReadyMaxFieldId = self.maxFieldId.replace( '.', '_' );
+						var attrReadyMaxFieldId = String(self.maxFieldId).replace('.', '_');
+
 						var maxFieldId = 'input_' + self.parentFormId + '_' + attrReadyMaxFieldId;
 
 						// GF uses "1" for the input index in the HTML id attribute for Single Product fields. Weird.
